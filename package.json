@@ -1,0 +1,15 @@
+{
+  "name": "ton-wallet-generator",
+  "version": "1.0.0",
+  "description": "Генерация TON кошельков с использованием TonWeb",
+  "main": "index.js",
+  "dependencies": {
+    "tonweb": "^0.0.28",
+    "tweetnacl": "^1.0.3"
+  },
+  "scripts": {
+    "start": "node api/generateTonWallet.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
