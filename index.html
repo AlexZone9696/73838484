@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генерация TON кошелька</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Генерация TON кошелька</h1>
+    <button id="generateBtn">Создать кошелек</button>
+    <pre id="result"></pre>
+
+    <script>
+        $(document).ready(function() {
+            $('#generateBtn').click(function() {
+                $.get('/api/generateTonWallet', function(data) {
+                    $('#result').text(JSON.stringify(data, null, 4));
+                }).fail(function() {
+                    $('#result').text('Произошла ошибка при генерации кошелька.');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
