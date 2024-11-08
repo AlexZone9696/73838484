@@ -1,0 +1,16 @@
+{
+  "builds": [
+    {
+      "src": "api/generateTonWallet.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "api/generateTonWallet.js" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
